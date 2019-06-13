@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>회원가입</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="joinForm" 
+  (ngSubmit)="doLogin(joinForm.value)">
+    <ion-item>
+      <ion-label>아이디</ion-label>
+      <ion-input type="text" formControlName="id"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>비밀번호</ion-label>
+      <ion-input type="password" formControlName="pwd"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>이름</ion-label>
+      <ion-input type="text" formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>지역선택</ion-label>
+      <ion-select>
+        <ion-select-option>선택</ion-select-option>
+        <ion-select-option *ngFor="let op of ops"
+          [value]="op.value">{{op.text}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>취미선택</ion-label>
+      <ion-select multiple="true" *ngIf="hobbies">
+        <ion-select-option *ngFor="let hobby of hobbies"
+          [value]="hobby.value">{{hobby.text}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-button type="submit" [disabled]="!joinForm.valid">회원가입</ion-button>
+      <ion-button type="reset">취소</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-label></ion-label>
+    </ion-item>
+  </form>
+</ion-content>

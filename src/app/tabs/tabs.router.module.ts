@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
+import { JoinPage } from '../join/join.page';
+import { SheetPage } from '../sheet/sheet.page';
+import { BadgePage } from '../badge/badge.page';
 
 const routes: Routes = [
   {
@@ -33,6 +36,18 @@ const routes: Routes = [
             loadChildren: '../tab3/tab3.module#Tab3PageModule'
           }
         ]
+      },
+      {
+        path: 'join',
+        component:JoinPage
+      },
+      {
+        path: 'sheet',
+        component:SheetPage
+      },
+      {
+        path: 'badge',
+        component:BadgePage
       },
       {
         path: '',
