@@ -5,7 +5,9 @@ const routes: Routes = [
   { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
   { path: 'join', loadChildren: './join/join.module#JoinPageModule' },
   { path: 'sheet', loadChildren: './sheet/sheet.module#SheetPageModule' },
-  { path: 'badge', loadChildren: './badge/badge.module#BadgePageModule' }
+  { path: 'badge', loadChildren: './badge/badge.module#BadgePageModule' },
+  { path: 'list', loadChildren: './list/list.module#ListPageModule' },
+  { path: 'grid', loadChildren: './grid/grid.module#GridPageModule' }
 ];
 @NgModule({
   imports: [

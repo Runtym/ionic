@@ -6,7 +6,7 @@ const httpOptions = {
   headers: new HttpHeaders(
     {'Content-Type': 'application/json'})
 };
-const baseUrl = "http://localhost:88";
+const baseUrl = "http://192.168.0.2:88";
 @Injectable({
   providedIn: 'root'
 })

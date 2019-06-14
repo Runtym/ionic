@@ -4,6 +4,8 @@ import { TabsPage } from './tabs.page';
 import { JoinPage } from '../join/join.page';
 import { SheetPage } from '../sheet/sheet.page';
 import { BadgePage } from '../badge/badge.page';
+import { ListPage } from '../list/list.page';
+import { GridPage } from '../grid/grid.page';
 
 const routes: Routes = [
   {
@@ -48,6 +50,14 @@ const routes: Routes = [
       {
         path: 'badge',
         component:BadgePage
+      },
+      {
+        path: 'list',
+        component:ListPage
+      },
+      {
+        path: 'grid',
+        component:GridPage
       },
       {
         path: '',

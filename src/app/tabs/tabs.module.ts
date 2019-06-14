@@ -8,6 +8,8 @@ import { TabsPage } from './tabs.page';
 import { JoinPageModule } from '../join/join.module';
 import { SheetPageModule } from '../sheet/sheet.module';
 import { BadgePageModule } from '../badge/badge.module';
+import { ListPageModule } from '../list/list.module';
+import { GridPageModule } from '../grid/grid.module';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { BadgePageModule } from '../badge/badge.module';
     TabsPageRoutingModule,
     JoinPageModule,
     SheetPageModule,
-    BadgePageModule
+    BadgePageModule,
+    ListPageModule,
+    GridPageModule
   ],
   declarations: [TabsPage]
 })
